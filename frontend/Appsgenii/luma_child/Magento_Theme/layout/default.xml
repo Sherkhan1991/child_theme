@@ -1,0 +1,51 @@
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <!-- referenceBlock name="page.top" remove="true" / -->
+        <!-- move element="catalog.topnav" destination="header-wrapper" after="logo" / -->
+
+        <move element="top.search" destination="header.panel" before="store_language"/>
+        <move element="minicart" destination="header.panel" after="store_language" />
+        <move element="logo" destination="header.panel" after="store_language" />
+
+        <referenceBlock name="form.subscribe" remove="true" />
+        <referenceBlock name="footer_links" remove="true" />
+        <!-- referenceBlock name="copyright" remove="true" / -->
+
+        <referenceContainer name="footer-container" htmlClass="page-footer">
+            <container name="footer-wrap" htmlTag="div" htmlClass="container">
+                <container name="footer-row-1" htmlTag="div" htmlClass="row is-flex footer-links">
+                    <container name="footer_col_1" htmlTag="div" htmlClass="col-xs-12 col-sm-3 footer-col col-md-2 border-left">
+                        <block class="Magento\Cms\Block\Block" name="footer_col_1_inner">
+                            <arguments>
+                                <argument name="block_id" xsi:type="string">footer-1</argument>
+                            </arguments>
+                        </block>
+                    </container>
+                    <container name="footer_col_2" htmlTag="div" htmlClass="col-xs-12 col-sm-3 footer-col col-md-2 border-left">
+                        <block class="Magento\Cms\Block\Block" name="footer_col_2_inner">
+                            <arguments>
+                                <argument name="block_id" xsi:type="string">footer-2</argument>
+                            </arguments>
+                        </block>
+                    </container>
+                    <container name="footer_col_3" htmlTag="div" htmlClass="col-xs-12 col-sm-3 footer-col col-md-2 border-left">
+                        <block class="Magento\Cms\Block\Block" name="footer_col_3_inner">
+                            <arguments>
+                                <argument name="block_id" xsi:type="string">footer-3</argument>
+                            </arguments>
+                        </block>
+                    </container>
+                    <container name="footer_col_4" htmlTag="div" htmlClass="col-xs-12 col-sm-3 footer-col col-md-2 border-left">
+                        <block class="Magento\Cms\Block\Block" name="footer_col_4_inner">
+                            <arguments>
+                                <argument name="block_id" xsi:type="string">footer-4</argument>
+                            </arguments>
+                        </block>
+                    </container>
+                    <container name="footer_col_5" htmlTag="div" htmlClass="col-xs-12 margintop-30sm footer-col col-md-3 col-md-offset-1">
+                    </container>
+                </container>
+            </container>
+        </referenceContainer>
+    </body>
+</page>
