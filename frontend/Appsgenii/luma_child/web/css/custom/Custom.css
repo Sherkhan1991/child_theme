@@ -1,0 +1,144 @@
+.page-footer {background: #80b036 !important; }
+.action.primary {
+    background: #333333 !important;
+    border: 1px solid #333333 !important;
+}
+
+/*Custom Blocks */
+.blackBox {
+    text-align: center;
+    background: #000;
+    padding: 5%;
+    color: #fff;
+}
+.blackBox h1 {
+    color: #fff;
+}
+
+.coloredBoxes {
+    text-align: center;
+    padding: 5%;
+    background-color: #fff; /* For browsers that do not support gradients */
+    background-image: linear-gradient(#80b036 50%, #fff 50%);
+}
+.coloredBoxes h1 {
+    margin: 10px 10px;
+}
+.estateButton {
+    padding: 15px 40px;
+    margin-top: 20px;
+    text-transform: uppercase;
+    color: #fff !important;
+    display: inline-block;
+    background: red;
+    border-radius: 5px;
+    text-decoration: none !important;
+    cursor: pointer;
+}.estateButton h3 {
+     margin: 0 !important;
+ }
+
+q {
+    quotes: '\201c' '\201d' !important;
+}
+q:before {
+    content: open-quote !important;
+}
+q:after {
+    content: close-quote !important;
+}
+
+hr {
+    border-top: 1px dotted #cccccc !important;
+    margin: 0 5%;
+}
+
+.owl-carousel-custom-2 .banner-item {
+    padding: 15%;
+}
+
+/* These elements need to override for header panel */
+
+.block-search input {
+    border-radius: 2px !important;
+}
+.block-search input:focus {
+    box-shadow: none;
+}
+
+@media screen and (min-width: 768px) {
+
+    .page-header .panel.wrapper {
+        background-color: #80b036 !important;
+        color: #fff;
+    }
+    .page-main {
+        max-width: 100% !important;
+        padding: 0 !important;
+    }
+
+    /* Element moved in header panel so this need to hide */
+    .header.content {
+        display: none;
+    }
+
+    .block-search {
+        width: 160px !important;
+    }
+
+    .minicart-wrapper .action.showcart {}
+    .minicart-wrapper .action.showcart:before {
+        content: 'cart' !important;
+        color: #fff !important;
+        font-size: 16px !important;
+        text-transform: uppercase;
+        font-family: initial !important;
+        line-height: 30px;
+    }
+
+    .logo {
+        margin: 0 !important;
+        position: absolute !important;
+        top: 0;
+    }
+    .logo img {
+        min-width: 316px;
+    }
+
+    .header.panel > .header.links {
+        padding: 6px 0px !important;
+    }
+    .header.panel > .header.links > li {
+        font-size: 16px;
+        text-transform: uppercase;
+    }
+    .header.panel .header.links li:not(:first-child):after {
+        content: "|";
+    }
+    .header.panel .header.links li:last-child:after {
+        padding-left: 10px;
+    }
+
+    /* to remove line between header panel and navigation*/
+    .page-header .panel.wrapper { border-bottom: 0 !important;}
+    .nav-sections {
+        background: #000000 !important;
+        padding: 10px 0px;
+    }
+    .navigation {
+        background:transparent !important;
+    }
+    .navigation ul {
+        float: right;
+    }
+    .navigation ul li:not(:last-child):after {
+        content: "|";
+    }
+    .navigation .level0 > .level-top {  color: #fff !important;  }
+
+    /* Footer */
+    .footer.content .links a {
+        color: #fff !important;
+        text-decoration: none !important;
+    }
+} 
