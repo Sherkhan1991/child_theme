@@ -20,6 +20,24 @@
     padding: 50px;
     background: rgba(0, 0, 0, 0.4);
 }
+.owl-carousel-custom-3 .banner-item {
+    padding: 20%;
+    padding-bottom: 31px;
+    border-bottom: 1px dotted #cccccc !important;
+    margin: 30px 10%;
+}
+.owl-carousel-custom-3 .owl-item img {
+    height: 200px !important;
+}
+.owl-carousel-custom-3 .banner-item .content_slider {
+    top: 0% !important;
+}
+.owl-carousel-custom-3 .banner-item .content_slider .custom_content {
+    color: #000 !important;
+}
+.owl-carousel-custom-3 .banner-item .content_slider .custom_content h1 {
+    margin: 10px 0px !important;
+}
 .fa:before {
     font-size: 24px;
     padding: 15px;
