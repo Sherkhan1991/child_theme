@@ -21,7 +21,7 @@
     background: rgba(0, 0, 0, 0.4);
 }
 .owl-carousel-custom-2 .banner-item {
-    padding: 15%;
+    padding: 20%;
     padding-top: 170px;
 }
 .owl-carousel-custom-2 .banner-item .content_slider {
@@ -115,6 +115,33 @@ hr {
     box-shadow: none !important;
 }
 
+#container {
+    display: flex;
+    justify-content: space-around;
+    width: 70%;
+    margin: 0 auto;
+}
+
+.column.left,
+.column.right {
+    width: 40%;
+}
+
+#button-container {
+    text-align: center;
+    width: 80%;
+    margin: 0 auto;
+}
+#button-container a {
+    padding: 15px 40px;
+    text-transform: uppercase;
+    color: #fff !important;
+    display: inline-block;
+    background: red;
+    border-radius: 5px;
+    text-decoration: none;
+    margin: 0 10px;
+}
 @media screen and (min-width: 768px) {
 
     .page-header .panel.wrapper {
