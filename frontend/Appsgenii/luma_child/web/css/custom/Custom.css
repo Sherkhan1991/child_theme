@@ -20,6 +20,20 @@
     padding: 50px;
     background: rgba(0, 0, 0, 0.4);
 }
+.owl-carousel-custom-2 .banner-item {
+    padding: 15%;
+    padding-top: 170px;
+}
+.owl-carousel-custom-2 .banner-item .content_slider {
+    top: 0% !important;
+}
+.owl-carousel-custom-2 .banner-item .content_slider .custom_content {
+    color: #000 !important;
+    font-size: 16px;
+}
+.owl-carousel-custom-2 .banner-item .content_slider .custom_content h1 {
+    margin-bottom: 10px !important;
+}
 .owl-carousel-custom-3 .banner-item {
     padding: 20%;
     padding-bottom: 31px;
@@ -90,10 +104,6 @@ q:after {
 hr {
     border-top: 1px dotted #cccccc !important;
     margin: 0 5%;
-}
-
-.owl-carousel-custom-2 .banner-item {
-    padding: 15%;
 }
 
 /* These elements need to override for header panel */
