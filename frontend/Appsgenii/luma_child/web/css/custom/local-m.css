@@ -1,0 +1,144 @@
+.page-footer {background: #80b036 !important; }
+/*.action.primary {
+    background: #333333 !important;
+    border: 1px solid #333333 !important;
+}*/
+
+/* Slider Content Box*/
+.owl-carousel-custom-1 .owl-stage-outer {
+    padding: 0 !important;
+}
+.owl-carousel-custom-1 .banner-item .content_slider {
+    left: 0 !important;
+}
+.owl-carousel-custom-1 .banner-item .content_slider .buttons {
+    text-align: left !important;
+}
+.owl-carousel-custom-1 .banner-item .content_slider .buttons .custom_content {
+    display: inline-block;
+    font-size: 40px;
+    padding: 50px;
+    background: rgba(0, 0, 0, 0.4);
+}
+.owl-carousel-custom-2 .banner-item {
+    padding: 20%;
+    padding-top: 170px;
+}
+.owl-carousel-custom-2 .banner-item .content_slider {
+    top: 0% !important;
+}
+.owl-carousel-custom-2 .banner-item .content_slider .custom_content {
+    color: #000 !important;
+    font-size: 16px;
+}
+.owl-carousel-custom-2 .banner-item .content_slider .custom_content h1 {
+    margin-bottom: 10px !important;
+}
+.owl-carousel-custom-3 .banner-item {
+    padding: 20%;
+    padding-bottom: 31px;
+    border-bottom: 1px dotted #cccccc !important;
+    margin: 30px 10%;
+}
+.owl-carousel-custom-3 .owl-item img {
+    height: 200px !important;
+}
+.owl-carousel-custom-3 .banner-item .content_slider {
+    top: 0% !important;
+}
+.owl-carousel-custom-3 .banner-item .content_slider .custom_content {
+    color: #000 !important;
+}
+.owl-carousel-custom-3 .banner-item .content_slider .custom_content h1 {
+    margin: 10px 0px !important;
+}
+.fa:before {
+    font-size: 24px;
+    padding: 15px;
+}
+
+/*Custom Blocks */
+.blackBox {
+    text-align: center;
+    background: #000;
+    padding: 5%;
+    color: #fff;
+}
+.blackBox h1 {
+    color: #fff;
+}
+
+.coloredBoxes {
+    text-align: center;
+    padding: 5%;
+    background-color: #fff; /* For browsers that do not support gradients */
+    background-image: linear-gradient(#80b036 50%, #fff 50%);
+}
+.coloredBoxes h1 {
+    margin: 10px 10px;
+}
+.estateButton {
+    padding: 15px 40px;
+    margin-top: 20px;
+    text-transform: uppercase;
+    color: #fff !important;
+    display: inline-block;
+    background: red;
+    border-radius: 5px;
+    text-decoration: none !important;
+    cursor: pointer;
+}.estateButton h3 {
+     margin: 0 !important;
+ }
+
+q {
+    quotes: '\201c' '\201d' !important;
+}
+q:before {
+    content: open-quote !important;
+}
+q:after {
+    content: close-quote !important;
+}
+
+hr {
+    border-top: 1px dotted #cccccc !important;
+    margin: 0 5%;
+}
+
+/* These elements need to override for header panel */
+
+.block-search input {
+    border-radius: 2px !important;
+}
+.block-search input:focus {
+    box-shadow: none !important;
+}
+
+#container {
+    display: flex;
+    justify-content: space-around;
+    width: 70%;
+    margin: 0 auto;
+}
+
+.column.left,
+.column.right {
+    width: 40%;
+}
+
+#button-container {
+    text-align: center;
+    width: 80%;
+    margin: 0 auto;
+}
+#button-container a {
+    padding: 15px 40px;
+    text-transform: uppercase;
+    color: #fff !important;
+    display: inline-block;
+    background: red;
+    border-radius: 5px;
+    text-decoration: none;
+    margin: 0 10px;
+}
