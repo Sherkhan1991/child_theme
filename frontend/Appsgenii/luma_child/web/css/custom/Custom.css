@@ -222,6 +222,38 @@ catalog-category-view.page-with-filter .column.main {
 .product-item-actions .actions-primary {
     display: inline-block !important;
 }
+
+/* Boxtocart */
+.box-tocart {
+    display: inline-block;
+    width: 260px;
+    float: left;
+    margin-bottom: 15px;
+}
+.box-tocart .qty label {
+    float: left;
+    margin-top: 10px !important;
+    font-size: 16px;
+    /* font-weight: normal !important; */
+}
+.box-tocart .control {
+    float: left;
+}
+.box-tocart .actions {
+    display: inline-block;
+}
+.box-tocart .actions button.tocart {
+    display: inline-block;
+    width: 100%;
+}
+.product-add-form .multi-price {
+    float: left;
+    margin-top: 20px;
+}
+.product-add-form .extra-box span:not(:last-child) {
+    margin-right: 20px;
+    padding-right: 20px;
+}
     /* -End product Page */
 
     /* -coloring */
@@ -310,6 +342,10 @@ a.estateButton {
     color: green;
 }
 
+.demo-tooltip {
+    .lib-tooltip(right);
+}
+
 /* -End elements - General Elements */
 
     /* -listing - Product listing */
@@ -351,7 +387,7 @@ h1.product-item-name a {
     float: left;
     margin-top: 10px;
 }
-.qty-price input {
+.qty-price input, .box-tocart .input-text.qty {
     float: left;
     width: 50px;
     height: 40px;
@@ -393,7 +429,7 @@ h1.product-item-name a {
 .extra-box {
     clear: both;
     border-top: 1px dotted #ccc;
-    width: 430px;
+    width: 450px;
     margin-top: 20px;
     padding-top: 20px;
     text-transform: uppercase;
