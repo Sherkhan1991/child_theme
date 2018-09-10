@@ -219,7 +219,9 @@ catalog-category-view.page-with-filter .column.main {
 }
 
 .catalog-product-view .page-title-wrapper {width: 70% !important;     margin-top: 60px !important;}
-
+.product-item-actions .actions-primary {
+    display: inline-block !important;
+}
     /* -End product Page */
 
     /* -coloring */

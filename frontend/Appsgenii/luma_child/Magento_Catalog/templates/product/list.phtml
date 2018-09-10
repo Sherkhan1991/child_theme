@@ -59,7 +59,7 @@ $_helper = $this->helper('Magento\Catalog\Helper\Output');
                     <a href="<?= /* @escapeNotVerified */ $_product->getProductUrl() ?>" class="product photo product-item-photo" tabindex="-1">
                         <?= $productImage->toHtml() ?>
                     </a>
-                    <div class="product details product-item-details custom2    ">
+                    <div class="product details product-item-details custom">
                         <?php
                         $_productNameStripped = $block->stripTags($_product->getName(), null, true);
                         ?>
@@ -87,8 +87,6 @@ $_helper = $this->helper('Magento\Catalog\Helper\Output');
                         <div class="list-box">
                             <div class="qty-price">
                                 <label> Quantity </label>
-                                <input class="qty" type=number />
-                                <? /* List Box Section  1*/ ?>
 
                                 <?= $block->getProductDetailsHtml($_product) ?>
 
@@ -101,6 +99,11 @@ $_helper = $this->helper('Magento\Catalog\Helper\Output');
                                                 <form data-role="tocart-form" data-product-sku="<?= $block->escapeHtml($_product->getSku()) ?>" action="<?= /* @NoEscape */ $postParams['action'] ?>" method="post">
                                                     <input type="hidden" name="product" value="<?= /* @escapeNotVerified */ $postParams['data']['product'] ?>">
                                                     <input type="hidden" name="<?= /* @escapeNotVerified */ Action::PARAM_NAME_URL_ENCODED ?>" value="<?= /* @escapeNotVerified */ $postParams['data'][Action::PARAM_NAME_URL_ENCODED] ?>">
+                                                    <input type="number" name="qty"
+                                                           id="qty" maxlength="12"
+                                                           value="<?php /* @escapeNotVerified */ echo '1' ?>"
+                                                           title="<?php /* @escapeNotVerified */ echo __('Qty') ?>" class="input-text qty" />
+                                                    <? /* List Box Section  1*/ ?>
                                                     <?= $block->getBlockHtml('formkey') ?>
                                                     <button type="submit"
                                                             title="<?= $block->escapeHtml(__('Add to Cart')) ?>"
