@@ -1,3 +1,7 @@
+body { font-family: Arial; }
+
+/* -header */
+
 .page-header .panel.wrapper {
     background-color: #80b036 !important;
     color: #fff;
@@ -6,7 +10,8 @@
     padding-bottom: 6px !important;
     padding-top: 6px !important;
 }
-.page-main {
+
+body.cms-home .page-main {
     max-width: 100% !important;
     padding: 0 !important;
 }
@@ -24,11 +29,11 @@
 .minicart-wrapper .action.showcart:before {
     content: 'cart' !important;
     color: #fff !important;
-    font-size: 16px !important;
+    font-size: 14px !important;
     text-transform: uppercase;
-    font-family: initial !important;
+    font-family: Arial !important;
     line-height: 30px;
-    padding-top: 3px;
+    padding-top: 1px;
 }
 
 .logo {
@@ -37,7 +42,6 @@
     top: 0;
 }
 .logo img {
-    /*min-width: 282px; */
     height: 110px;
     width: 100%;
 }
@@ -46,12 +50,22 @@
     padding: 6px 0px !important;
 }
 .header.panel > .header.links > li {
-    font-size: 16px;
+    font-size: 14px;
     text-transform: uppercase;
 }
 .header.panel .header.links li:not(:first-child):after {
     content: "|";
 }
+.header.panel .header.links li:last-child:after {
+    padding-left: 10px;
+}
+/* to remove line between header panel and navigation*/
+.page-header .panel.wrapper { border-bottom: 0 !important;}
+
+    /* -End header */
+
+    /* -navigation */
+
 /* Ul list main menu need to set
 .navigation .ui-menu .submenu {
     margin-top: 10px;
@@ -62,12 +76,7 @@
     color: #fff !important;
 }
 
-.header.panel .header.links li:last-child:after {
-    padding-left: 10px;
-}
 
-/* to remove line between header panel and navigation*/
-.page-header .panel.wrapper { border-bottom: 0 !important;}
 .nav-sections {
     background: #000000 !important;
     padding: 10px 0px;
@@ -86,28 +95,313 @@ body:not(cms-home) .nav-sections {
 .navigation ul li.level0:not(:last-child):after {
     content: "|";
 }
-.navigation .level0 > .level-top {  color: #fff !important;  }
-
-/* Footer */
-.footer.content .links a {
+.navigation .level0 > .level-top {
     color: #fff !important;
-    text-decoration: none !important;
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: 100;
+}
+    /* -End navigation */
+
+    /* -blocks */
+.brands-logo {
+    text-align: center;
+    margin-top: 25px !important;
 }
 
-.container .col-sm-3 {
-    width: 25%;
-    float: left;
+    /* -footer */
+.page-footer {
     text-align: center;
+}
+
+.page-footer .container {
+    display: inline-block;
+    width: 1200px;
+}
+.container .col-sm-3 {
+    float: left;
+    padding: 0px 25px;
+    text-align: center;
+    height: 115px;
+    margin-top: 15px;
     color: #fff;
+}
+.container .col-sm-3:not(:last-child) {
+    border-right: 1px dotted #ccc;
 }
 .container .col-sm-3 a {
-    color: #fff;
+    color: #fff !important;
 }
 .container .col-sm-3 h4 {
     text-transform: uppercase;
+}
+.footer.content .links a {
+    color: #fff !important;
+    text-decoration: none !important;
 }
 .copyright {
     margin-top: 5px;
     padding: 20px !important;
     background-color: #000 !important;
 }
+    /* -End footer */
+
+/* -landing Pages*/
+
+.catalog-category-view.page-layout-1column .category-view {
+    width: 70%;
+    float: left;
+}
+.catalog-category-view.page-layout-1column .page-title-wrapper {
+    width: 30%;
+    float: left;
+}
+catalog-category-view.page-with-filter .column.main {
+    clear: both;
+    border-top: 1px dotted #cccccc !important;
+    margin: 0 0%;
+}
+.page-layout-1column .toolbar-products {
+    display: none;
+}
+
+.page-title-wrapper {
+    margin-top: 15px;
+}
+
+.product-item-description .action.more {
+    display: none;
+}
+.page-layout-1column .sidebar-additional {
+    display: none;
+}
+    /* -End landing Pages*/
+
+    /* -checkout Page */
+.checkout-container {
+    margin: 0 0 20px;
+    margin-top: 30px;
+}
+.checkout-index-index .action-auth-toggle {
+    display: none;
+}
+.checkout-index-index .nav-sections { display: block; }
+.checkout-index-index .logo img {
+    height: 107px;
+}
+
+    /* -End checkout Page */
+
+    /* -product Page */
+
+.product-item-description {
+    width: 430px;
+}
+
+.catalog-product-view .block-margin.row {
+    clear: both;
+}
+
+.catalog-product-view .products-related .owl-controls,
+.catalog-product-view .products-related .owl-nav.fullscreen,
+.catalog-product-view .products-related .block-title,
+.catalog-product-view .block-margin.row .block-actions,
+.catalog-product-view .products-related .price-box,
+.catalog-product-view .products-related .choice.related {
+    display: none;
+}
+
+.product-reviews-summary.empty,
+.product-social-links,
+.product-info-price,
+.product.info.detailed {
+    display: none !important;
+}
+
+.catalog-product-view .page-title-wrapper {width: 70% !important;     margin-top: 60px !important;}
+
+    /* -End product Page */
+
+    /* -coloring */
+button:not(.action-edit):not(.search):not(#btn-minicart-close),
+buttony:not(.action-edit):hover,
+button:not(.action-edit):focus,
+button:not(.action-edit):active
+{
+    background: red !important;
+    border-color: red !important;
+    color: #fff !important;
+}
+
+.action.primary,
+.action.primary:hover,
+.action.primary:focus,
+.action.primary:active
+{
+    background: red;
+    border-color: red;
+    color: #fff;
+}
+
+.opc-progress-bar-item._active>span:before {
+    background: red;
+    border-color: red;
+    color: #fff;
+}
+.opc-progress-bar-item._active:before {
+    background: red;
+    border-color: red;
+    color: #fff;
+}
+
+.minicart-wrapper .action.showcart .counter.qty {
+    background: red;
+}
+.navigation .level0.active>.level-top, .navigation .level0.has-active>.level-top {
+    border-color: red;
+}
+
+.catalog-product-view .box-tocart #product-addtocart-button {
+    background: red;
+    border-color: red;
+}
+
+.product-item .tocart:hover,
+.product-item .tocart:focus
+{
+    background: red;
+    border-color: red;
+}
+
+a, .alink, a:visited, .alink:visited, .checkout-payment-method .payment-option-title .action-toggle,
+.action.remind, .action.remind:active,
+.paypal-review-discount .block>.title strong, .cart-discount .block>.title strong {
+    color: #000 !important;
+}
+a.create,
+.header.links a,
+a.continue,
+a.estateButton {
+    color: #fff !important;
+}
+
+.message.success>*:first-child:before,
+.message.success {
+    color: green !important;
+}
+._keyfocus *:focus, input:not([disabled]):focus, textarea:not([disabled]):focus, select:not([disabled]):focus {
+    box-shadow: none !important;
+}
+
+    /* -End coloring */
+
+    /* -elements - General Elements */
+
+.breadcrumbs {
+    margin-top: 25px;
+    margin-bottom: 0px;
+    text-transform: uppercase;
+    font-size: 11px;
+}
+.breadcrumbs a,
+.breadcrumbs a:visited {
+    color: green;
+}
+
+/* -End elements - General Elements */
+
+    /* -listing - Product listing */
+a.towishlist, a.tocompare {
+    display: none !important;
+}
+
+.product-item-description .action.more,
+.products-list .price-box{
+    display: none;
+}
+
+.products-list .product-image-wrapper {
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+}
+
+h1.product-item-name a {
+    color: #80b036 !important;
+}
+
+.list-box .product-item-inner { display: inline-block; float: left; }
+
+.product-item .tocart {
+    background: red;
+    border-color: red;
+    border-radius: 4px;
+    padding: 15px;
+}
+
+.list-box {
+    font-size: 16px;
+}
+
+.qty-price {
+    display: inline-block;
+}
+.qty-price label {
+    float: left;
+    margin-top: 10px;
+}
+.qty-price input {
+    float: left;
+    width: 50px;
+    height: 40px;
+    margin-left: 15px;
+    border-radius: 4px;
+    margin-right: 30px;
+    border: 2px solid #ccc;
+    text-align: center;
+    margin-top: 3px;
+}
+
+.qty-price input:focus {
+    box-shadow: none;
+}
+
+.multi-price {
+    display: inline-block;
+    margin-left: 20px;
+    font-size: 12px;
+}
+.multi-price .label {
+    float: left;
+    color: #80b036;
+    text-align: right;
+    margin-right: 15px;
+    border-right: 1px dotted #ccc;
+    padding-right: 10px;
+}
+.multi-price .qty-label {
+    float: left;
+    color: grey;
+}
+.multi-price .prices {
+    float: left;
+    color: grey;
+    margin-left: 15px;
+}
+
+.extra-box {
+    clear: both;
+    border-top: 1px dotted #ccc;
+    width: 430px;
+    margin-top: 20px;
+    padding-top: 20px;
+    text-transform: uppercase;
+    color: grey;
+    /* margin-right: 25px; */
+}
+.extra-box span {}
+.extra-box span:not(:last-child) {
+    margin-right: 10px;
+    border-right: 1px dotted #ccc;
+    padding-right: 10px;
+}
+    /* -End listing - Product listing */
