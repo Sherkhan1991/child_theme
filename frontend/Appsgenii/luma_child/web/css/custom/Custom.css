@@ -342,10 +342,6 @@ a.estateButton {
     color: green;
 }
 
-.demo-tooltip {
-    .lib-tooltip(right);
-}
-
 /* -End elements - General Elements */
 
     /* -listing - Product listing */
@@ -443,3 +439,10 @@ h1.product-item-name a {
     padding-right: 10px;
 }
     /* -End listing - Product listing */
+
+.cms-home .page-title-wrapper {
+    display: none;
+}
+h1 {
+    color: #80b036;
+}
