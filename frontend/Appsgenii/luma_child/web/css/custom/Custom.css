@@ -213,8 +213,7 @@ catalog-category-view.page-with-filter .column.main {
 
 .product-reviews-summary.empty,
 .product-social-links,
-.product-info-price,
-.product.info.detailed {
+.product-info-price {
     display: none !important;
 }
 
@@ -254,6 +253,11 @@ catalog-category-view.page-with-filter .column.main {
     margin-right: 20px;
     padding-right: 20px;
 }
+/* More Information tab */
+.additional-attributes tr:nth-child(even) {background: #e8e8e8;/* padding: 0 8px !important; */}
+.additional-attributes tr {border: 1px solid #ccc;}
+.additional-attributes tr th {padding: 7px 15px !important; border-right: 1px solid #ccc !important;}
+
     /* -End product Page */
 
     /* -coloring */
