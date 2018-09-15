@@ -86,7 +86,6 @@ $_helper = $this->helper('Magento\Catalog\Helper\Output');
                         <? /* List Box Section */ ?>
                         <div class="list-box">
                             <div class="qty-price">
-                                <label> Quantity </label>
 
                                 <?= $block->getProductDetailsHtml($_product) ?>
 
@@ -99,11 +98,14 @@ $_helper = $this->helper('Magento\Catalog\Helper\Output');
                                                 <form data-role="tocart-form" data-product-sku="<?= $block->escapeHtml($_product->getSku()) ?>" action="<?= /* @NoEscape */ $postParams['action'] ?>" method="post">
                                                     <input type="hidden" name="product" value="<?= /* @escapeNotVerified */ $postParams['data']['product'] ?>">
                                                     <input type="hidden" name="<?= /* @escapeNotVerified */ Action::PARAM_NAME_URL_ENCODED ?>" value="<?= /* @escapeNotVerified */ $postParams['data'][Action::PARAM_NAME_URL_ENCODED] ?>">
+                                                    <?php if ($_product->getTypeId() != 'configurable'): ?>
+                                                        <label> <?= /* @escapeNotVerified */ __('Quantity') ?></label>
                                                     <input type="number" name="qty"
                                                            id="qty" maxlength="12"
-                                                           value="<?php /* @escapeNotVerified */ echo '1' ?>"
-                                                           title="<?php /* @escapeNotVerified */ echo __('Qty') ?>" class="input-text qty" />
-                                                    <? /* List Box Section  1*/ ?>
+                                                           value="1"
+                                                           title="<?= /* @escapeNotVerified */ __('Qty') ?>" class="input-text qty" />
+                                                    <?php endif; ?>
+                                                    <?php /* List Box Section  1*/ ?>
                                                     <?= $block->getBlockHtml('formkey') ?>
                                                     <button type="submit"
                                                             title="<?= $block->escapeHtml(__('Add to Cart')) ?>"
