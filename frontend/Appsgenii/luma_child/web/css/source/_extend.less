@@ -1,24 +1,310 @@
 /**
- * Infortis/ultimo_child
- * Custom CSS fallback
- * app/design/frontend/Infortis/ultimo_child/web/css/_custom.less
+ * Extend the Default luma theme
+ * Custom LESS
  */
 & when (@media-common = true) {
+
   @full_width: 100%;
-  //@imp: !important;
+
+  @768:~"only screen and (min-width: 768px)";
+
+  @imp: !important;
 
   //color
-  @black: #000;
-  @green: #80b036;
+  @black: #000 @imp;
+  @green: #80b036 @imp;
+  @border-color: #cccccc;
 
   .display {
     display: none;
   }
+
   body {
-    font-family: Georgia,Times,Times New Roman,serif ;
+    font-family: Arial;
   }
-  .page-header .panel.wrapper {
-    background-color: @green !important;
+  h1 {
+    color: #80b036 @imp;
+  }
+  //General elements
+  .fa:before {
+    font-size: 24px;
+    padding: 15px;
+  }
+
+  .demo-tooltip {
+    .lib-tooltip(bottom);
+  }
+
+  hr {
+    border-top: 1px dotted @border-color @imp;
+    margin: 0 5%;
+  }
+
+  q {
+    quotes: '\201c' '\201d' @imp;
+    &:before {
+      content: open-quote @imp;
+    }
+    &:after {
+      content: close-quote @imp;
+    }
+  }
+
+  .fa {
+    &:before {
+      font-size: 24px;
+      padding: 15px;
+    }
+  }
+
+  //Home
+  .cms-home {
+    .page-title-wrapper {
+      display: none;
+    }
+  }
+
+  //Header
+  .block-search {
+    input {
+      border-radius: 2px @imp;
+      &:focus {
+        box-shadow: none @imp;
+      }
+    }
+  }
+  //Navigation
+
+
+  //CMS Blocks
+  #container {
+    display: flex;
+    justify-content: space-around;
+    width: 70%;
+    margin: 0 auto;
+    .column {
+      width: 40%;
+    }
+  }
+
+  #button-container {
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
+    a {
+      padding: 15px 40px;
+      text-transform: uppercase;
+      color: #fff @imp;
+      display: inline-block;
+      background: red;
+      border-radius: 5px;
+      text-decoration: none;
+      margin: 0 10px;
+    }
+  }
+
+  /*Custom Blocks */
+  .blackBox {
+    text-align: center;
+    background: #000;
+    padding: 5%;
     color: #fff;
+    h1 {
+      color: #fff;
+    }
   }
+
+  .coloredBoxes {
+    text-align: center;
+    padding: 5%;
+    background-color: #fff; /* For browsers that do not support gradients */
+    background-image: linear-gradient(@green 50%, #fff 50%);
+    h1 {
+      margin: 10px 10px;
+    }
+  }
+
+  .estateButton {
+    padding: 15px 40px;
+    margin-top: 20px;
+    text-transform: uppercase;
+    color: #fff @imp;
+    display: inline-block;
+    background: red;
+    border-radius: 5px;
+    text-decoration: none @imp;
+    cursor: pointer;
+    h3 {
+      margin: 0 @imp;
+    }
+  }
+
+  /* Slider Content Box */
+  .owl-carousel-custom-1 {
+    .owl-stage-outer {
+      padding: 0 @imp;
+      .banner-item {
+        .content_slider {
+          left: 0 @imp;
+          .buttons {
+            text-align: left @imp;
+            .custom_content {
+              display: inline-block;
+              font-size: 40px;
+              padding: 50px;
+              background: rgba(0, 0, 0, 0.4);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // Slider Category Teaser
+  .owl-carousel-custom-2 {
+    .banner-item {
+      padding: 20%;
+      padding-top: 170px;
+      .content_slider {
+        top: 0 @imp;
+        .custom_content {
+          color: #000 @imp;
+          font-size: 16px;
+          h1 {
+            margin-bottom: 10px @imp;
+          }
+        }
+      }
+    }
+  }
+
+  // Prod Slider
+  .owl-carousel-custom-3 {
+    .banner-item {
+      padding: 20%;
+      padding-bottom: 31px;
+      border-bottom: 1px dotted #cccccc @imp;
+      margin: 30px 10%;
+      .banner-image img {
+        height: 200px @imp;
+      }
+      .content_slider {
+        top: 0 @imp;
+          .custom_content {
+            color: #000 @imp;
+            h1 {
+              margin: 10px 0px @imp;
+            }
+          }
+      }
+    }
+  }
+
+  //Category Page
+  .list-box {
+    font-size: 16px;
+    .qty-price {
+      display: inline-block;
+      label {
+        float: left;
+        margin-top: 10px;
+      }
+      input:focus {
+        box-shadow: none;
+      }
+      .product-item-inner {
+        display: inline-block;
+        float: left;
+      }
+    }
+  }
+  .qty-price input, .box-tocart .input-text.qty {
+    float: left;
+    width: 50px;
+    height: 40px;
+    margin-left: 15px;
+    border-radius: 4px;
+    margin-right: 30px;
+    border: 2px solid #ccc;
+    text-align: center;
+    margin-top: 3px;
+  }
+  .multi-price {
+    display: inline-block;
+    margin-left: 20px;
+    font-size: 12px;
+    .label {
+      float: left;
+      color: #80b036;
+      text-align: right;
+      margin-right: 15px;
+      border-right: 1px dotted #ccc;
+      padding-right: 10px;
+    }
+    .qty-label {
+      float: left;
+      color: grey;
+    }
+    .prices {
+      float: left;
+      color: grey;
+      margin-left: 15px;
+    }
+  }
+  .extra-box {
+    clear: both;
+    border-top: 1px dotted @border-color;
+    width: 450px;
+    margin-top: 20px;
+    padding-top: 20px;
+    text-transform: uppercase;
+    color: grey;
+    /* margin-right: 25px; */
+    span {
+      &:not(:last-child) {
+        margin-right: 10px;
+        border-right: 1px dotted @border-color;
+        padding-right: 10px;
+      }
+    }
+  }
+  //Prod Detail Page
+
+
+  //Page Bottom
+  .page-bottom {
+    padding: 0 @imp;
+    max-width: none @imp;
+    margin: 0 @imp;
+    text-align: center;
+    h1 {
+      margin-bottom: 15px;
+    }
+    .widget {
+      &:first-child {
+        background: #000;
+        padding: 35px 0px;
+        .threeBox {
+          a {
+            &:not(:last-child) {
+              margin-right: 20px;
+            }
+          }
+        }
+      }
+      .questBox {
+        padding: 20px 0;
+      }
+    }
+  }
+
+  //Footer
+  .page-footer {
+    background: #80b036 @imp;
+  }
+  @media @768 {
+
+  }
+
+
 }

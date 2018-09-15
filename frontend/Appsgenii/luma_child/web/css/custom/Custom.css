@@ -367,86 +367,10 @@ h1.product-item-name a {
     color: #80b036 !important;
 }
 
-.list-box .product-item-inner { display: inline-block; float: left; }
-
 .product-item .tocart {
     background: red;
     border-color: red;
     border-radius: 4px;
     padding: 15px;
 }
-
-.list-box {
-    font-size: 16px;
-}
-
-.qty-price {
-    display: inline-block;
-}
-.qty-price label {
-    float: left;
-    margin-top: 10px;
-}
-.qty-price input, .box-tocart .input-text.qty {
-    float: left;
-    width: 50px;
-    height: 40px;
-    margin-left: 15px;
-    border-radius: 4px;
-    margin-right: 30px;
-    border: 2px solid #ccc;
-    text-align: center;
-    margin-top: 3px;
-}
-
-.qty-price input:focus {
-    box-shadow: none;
-}
-
-.multi-price {
-    display: inline-block;
-    margin-left: 20px;
-    font-size: 12px;
-}
-.multi-price .label {
-    float: left;
-    color: #80b036;
-    text-align: right;
-    margin-right: 15px;
-    border-right: 1px dotted #ccc;
-    padding-right: 10px;
-}
-.multi-price .qty-label {
-    float: left;
-    color: grey;
-}
-.multi-price .prices {
-    float: left;
-    color: grey;
-    margin-left: 15px;
-}
-
-.extra-box {
-    clear: both;
-    border-top: 1px dotted #ccc;
-    width: 450px;
-    margin-top: 20px;
-    padding-top: 20px;
-    text-transform: uppercase;
-    color: grey;
-    /* margin-right: 25px; */
-}
-.extra-box span {}
-.extra-box span:not(:last-child) {
-    margin-right: 10px;
-    border-right: 1px dotted #ccc;
-    padding-right: 10px;
-}
     /* -End listing - Product listing */
-
-.cms-home .page-title-wrapper {
-    display: none;
-}
-h1 {
-    color: #80b036;
-}
