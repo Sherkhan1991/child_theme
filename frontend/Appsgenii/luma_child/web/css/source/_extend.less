@@ -74,7 +74,21 @@
     }
   }
   //Navigation
-
+	.navigation .level-top {
+		&:not(:first-child):not(.nav-3):not(.nav-4) {
+		  a.level-top {
+			pointer-events: none;
+		  }
+		  &.nav-1 li.level1 {
+			&:not(.nav-1-3) > a{
+				pointer-events: none;
+			}
+		  }
+		  &.nav-5 li.level1 > a {
+			pointer-events: none;
+		  }
+		}	
+	}
 
   //CMS Blocks
   #container {
@@ -201,6 +215,7 @@
   }
 
   //Category Page
+  // Product Listing
   .list-box {
     font-size: 16px;
     .qty-price {
@@ -251,25 +266,55 @@
       margin-left: 15px;
     }
   }
-  .extra-box {
-    clear: both;
-    border-top: 1px dotted @border-color;
-    width: 450px;
-    margin-top: 20px;
-    padding-top: 20px;
-    text-transform: uppercase;
-    color: grey;
-    /* margin-right: 25px; */
-    span {
-      &:not(:last-child) {
-        margin-right: 10px;
-        border-right: 1px dotted @border-color;
-        padding-right: 10px;
-      }
-    }
-  }
+	.extra-box {
+		clear: both;
+		border-top: 1px dotted @border-color;
+		width: 75%;
+		margin-top: 20px;
+		padding-top: 10px;
+		text-transform: uppercase;
+		/* color: grey; */
+		/* margin-right: 25px; */
+		span {
+		  &:not(:last-child) {
+			margin-right: 10px;
+			border-right: 1px dotted @border-color;
+			padding-right: 10px;
+		  }
+		}
+	}
+	.extra-box > span, 
+	.extra-box > a {
+		visibility: hidden;
+	}
+	.product-item-description {
+		width: 430px;
+		.action.more {
+			.display
+		}
+		.categorypath-products-moving-boxes-plain &, .categorypath-products-branded-realtor-branded-boxes & {
+			width: auto;
+			max-width: 700px;
+		}		
+	}
+  
   //Prod Detail Page
 
+	.product-add-form {
+		.overview table {
+			.display
+		}
+		.multi-price {
+			float: left;
+			margin-top: 20px;
+		}
+		.extra-box span {
+			&:not(:last-child) {
+				margin-right: 20px;
+				padding-right: 20px;
+			}
+		}
+	}
 
   //Page Bottom
   .page-bottom {
@@ -297,7 +342,142 @@
       }
     }
   }
+  
+  // Product detail tabs
+		table.tabTable {
+			border: 1px solid #ccc;
+			max-width: 700px;
+			text-align: center;
+			td {
+				.catalog-category-view & {
+					padding: 5px;
+				}			
+				&:not(last-child) {
+					border-right: 1px solid #ccc @imp;
+				}
+			}
+			tr {
+				&:last-child, &:first-child {
+					font-weight: bold;
+				}			
+			}			
+		}
+		tr {
+			.product.data.items &, table.tabTable & {
+				border: 1px solid #ccc;
+				&:nth-child(even) {
+					background: #e8e8e8;
+				}
+				th {
+					padding: 7px 15px @imp; 
+					border-right: 1px solid #ccc @imp;
+				}
+			}
+          }
+  
+  //CMS Page
+  /*2-column right*/
+.page-layout-2columns-right, .catalog-category-view,
+.categorypath-products-moving-boxes-plain, 
+.categorypath-products-branded-realtor-branded-boxes  { 
+	.page-title-wrapper {
+		.page-title {
+			margin-bottom: 0;
+		}
+	}
+	.category-view {
+		.display
+	}
+	.column.main {
+		//clear: both;
+		//border-top: 1px dotted #cccccc !important;
+		//margin: 0 0%;
+	}
+	.sidebar-additional {
+		text-align: center;
+		.block-products-list {
+			margin-bottom: 0px @imp;
+			.block-title {
+				color: @green;
+			}
+			.product-item {
+			    margin-bottom: 0;
+				.product-item-info {
+					&:hover {
+						.product-item-photo {
+							top: 0px @imp;
+							left: 0px @imp;
+						}
+					}
+				}
+			}
+			.product-item-details {
+				.product-item-name, .price-box {
+					.display
+				}
+			}
+			.product-item-actions {
+				.actions-primary {
+				    width: @full_width;
+					.tocart {
+					width: @full_width;
+					border-radius: 4px;
+					}
+				}
+			}
+		}
+	}
+	.estateButton {
+		padding: 15px 10px;
+		font-size: 1.2rem;
+		margin-bottom: 15px;
+		font-weight: bold;
+		width: 90%;
+	}
+}
+/* layout-1column */
+.page-layout-1column {
+	.cmsTable {
+	    width: 80%;
+		margin: 0 auto;
+		td {
+			img {
+				padding-top: 30px;
+			}
+		}
+		.estateButton.green {
+			background: @green;
+		}
+		p {
+			width: 80%; 
+		}
+		h2 {
+			color: #000 @imp;
+		}
+		hr {
+			//margin: 0 auto @imp;
+			//width: 80%;
+		}
+	}
+}
 
+/* Custom Form */
+#customboxesPost {
+	max-width: 620px;
+	label {
+		font-weight: bold;
+	}
+	input,textarea,select {
+	    margin: 10px 0;
+	}
+	#customboxesSubmit {
+		padding: 15px 30px;
+	}
+}
+/* Contact form */
+form.contact {
+	margin-top: 30px;
+}
   //Footer
   .page-footer {
     background: #80b036 @imp;

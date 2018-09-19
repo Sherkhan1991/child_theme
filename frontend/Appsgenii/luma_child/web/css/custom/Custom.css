@@ -7,8 +7,8 @@ body { font-family: Arial; }
     color: #fff;
 }
 .page-header .header.panel {
-    padding-bottom: 6px !important;
-    padding-top: 6px !important;
+    padding-bottom: 4px !important;
+    padding-top: 4px !important;
 }
 
 body.cms-home .page-main {
@@ -25,7 +25,9 @@ body.cms-home .page-main {
     width: 160px !important;
 }
 
-.minicart-wrapper .action.showcart {}
+.minicart-wrapper {
+	margin-left: 10px;
+}
 .minicart-wrapper .action.showcart:before {
     content: 'cart' !important;
     color: #fff !important;
@@ -42,8 +44,8 @@ body.cms-home .page-main {
     top: 0;
 }
 .logo img {
-    height: 110px;
-    width: 100%;
+    width: auto;
+    max-height: 98px; 
 }
 
 .header.panel > .header.links {
@@ -52,12 +54,14 @@ body.cms-home .page-main {
 .header.panel > .header.links > li {
     font-size: 14px;
     text-transform: uppercase;
+	margin: 0 0 0 10px;
 }
 .header.panel .header.links li:not(:first-child):after {
     content: "|";
+	margin: 0 -5px 0 2px;
 }
 .header.panel .header.links li:last-child:after {
-    padding-left: 10px;
+    padding-left: 4px;
 }
 /* to remove line between header panel and navigation*/
 .page-header .panel.wrapper { border-bottom: 0 !important;}
@@ -75,16 +79,15 @@ body.cms-home .page-main {
     background: #80b036 !important;
     color: #fff !important;
 }
-
+.navigation .level0 .submenu a.ui-state-active {
+    background-color: #80b036;
+    color: #fff !important;
+}
 
 .nav-sections {
     background: #000000 !important;
-    padding: 10px 0px;
+    padding: 4px 0px;
     margin-bottom: 0 !important;
-}
-body:not(cms-home) .nav-sections {
-    padding: 8px 0px;
-    padding-bottom: 6px;
 }
 .navigation {
     background:transparent !important;
@@ -95,11 +98,14 @@ body:not(cms-home) .nav-sections {
 .navigation ul li.level0:not(:last-child):after {
     content: "|";
 }
+.navigation .level0 {
+    margin: 0 0px 0 0;
+}
 .navigation .level0 > .level-top {
     color: #fff !important;
     text-transform: uppercase;
-    font-size: 16px;
     font-weight: 100;
+	padding: 0 10px;
 }
     /* -End navigation */
 
@@ -148,19 +154,6 @@ body:not(cms-home) .nav-sections {
 
 /* -landing Pages*/
 
-.catalog-category-view.page-layout-1column .category-view {
-    width: 70%;
-    float: left;
-}
-.catalog-category-view.page-layout-1column .page-title-wrapper {
-    width: 30%;
-    float: left;
-}
-catalog-category-view.page-with-filter .column.main {
-    clear: both;
-    border-top: 1px dotted #cccccc !important;
-    margin: 0 0%;
-}
 .page-layout-1column .toolbar-products {
     display: none;
 }
@@ -169,9 +162,6 @@ catalog-category-view.page-with-filter .column.main {
     margin-top: 15px;
 }
 
-.product-item-description .action.more {
-    display: none;
-}
 .page-layout-1column .sidebar-additional {
     display: none;
 }
@@ -187,16 +177,12 @@ catalog-category-view.page-with-filter .column.main {
 }
 .checkout-index-index .nav-sections { display: block; }
 .checkout-index-index .logo img {
-    height: 107px;
+    height: 90px;
 }
 
     /* -End checkout Page */
 
     /* -product Page */
-
-.product-item-description {
-    width: 430px;
-}
 
 .catalog-product-view .block-margin.row {
     clear: both;
@@ -213,7 +199,7 @@ catalog-category-view.page-with-filter .column.main {
 
 .product-reviews-summary.empty,
 .product-social-links,
-.product-info-price {
+.price-box {
     display: none !important;
 }
 
@@ -245,19 +231,6 @@ catalog-category-view.page-with-filter .column.main {
     display: inline-block;
     width: 100%;
 }
-.product-add-form .multi-price {
-    float: left;
-    margin-top: 20px;
-}
-.product-add-form .extra-box span:not(:last-child) {
-    margin-right: 20px;
-    padding-right: 20px;
-}
-/* More Information tab */
-.additional-attributes tr:nth-child(even) {background: #e8e8e8;/* padding: 0 8px !important; */}
-.additional-attributes tr {border: 1px solid #ccc;}
-.additional-attributes tr th {padding: 7px 15px !important; border-right: 1px solid #ccc !important;}
-
     /* -End product Page */
 
     /* -coloring */
@@ -353,7 +326,6 @@ a.towishlist, a.tocompare {
     display: none !important;
 }
 
-.product-item-description .action.more,
 .products-list .price-box{
     display: none;
 }
@@ -365,6 +337,7 @@ a.towishlist, a.tocompare {
 
 h1.product-item-name a {
     color: #80b036 !important;
+	text-decoration: none !important;
 }
 
 .product-item .tocart {
