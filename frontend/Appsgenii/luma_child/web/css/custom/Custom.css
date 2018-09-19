@@ -70,43 +70,6 @@ body.cms-home .page-main {
 
     /* -navigation */
 
-/* Ul list main menu need to set
-.navigation .ui-menu .submenu {
-    margin-top: 10px;
-} */
-.navigation .level0 .submenu a { color: #000000 !important; }
-.navigation .level0 .submenu a:hover {
-    background: #80b036 !important;
-    color: #fff !important;
-}
-.navigation .level0 .submenu a.ui-state-active {
-    background-color: #80b036;
-    color: #fff !important;
-}
-
-.nav-sections {
-    background: #000000 !important;
-    padding: 4px 0px;
-    margin-bottom: 0 !important;
-}
-.navigation {
-    background:transparent !important;
-}
-.navigation ul {
-    float: right;
-}
-.navigation ul li.level0:not(:last-child):after {
-    content: "|";
-}
-.navigation .level0 {
-    margin: 0 0px 0 0;
-}
-.navigation .level0 > .level-top {
-    color: #fff !important;
-    text-transform: uppercase;
-    font-weight: 100;
-	padding: 0 10px;
-}
     /* -End navigation */
 
     /* -blocks */
@@ -267,9 +230,6 @@ button:not(.action-edit):active
 
 .minicart-wrapper .action.showcart .counter.qty {
     background: red;
-}
-.navigation .level0.active>.level-top, .navigation .level0.has-active>.level-top {
-    border-color: red;
 }
 
 .catalog-product-view .box-tocart #product-addtocart-button {
