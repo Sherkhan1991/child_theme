@@ -64,13 +64,15 @@ $_helper = $this->helper('Magento\Catalog\Helper\Output');
                         $_productNameStripped = $block->stripTags($_product->getName(), null, true);
                         ?>
                         <? /* Product title */ ?>
+						<?php 
+   $productname = $_helper->productAttribute($_product, $_product->getName(), 'name');
+   $newproductname = str_replace('ft3', 'ft<sup>3</sup>', $productname); ?>
                         <h1 class="product name product-item-name">
                             <a class="product-item-link"
                                href="<?= /* @escapeNotVerified */ $_product->getProductUrl() ?>">
-                                <?= /* @escapeNotVerified */ $_helper->productAttribute($_product, $_product->getName(), 'name') ?>
+                                <?= /* @escapeNotVerified */ $newproductname ?>
                             </a>
                         </h1>
-
                         <?= $block->getReviewsSummaryHtml($_product, $templateType) ?>
 
                         <? /* Short Description */ ?>
@@ -137,7 +139,9 @@ $_helper = $this->helper('Magento\Catalog\Helper\Output');
                                     <span class="prices"> $19.99 <br/> $19.64 <br/> $17.83</span>
                                 </div>
                             </div>
+							
                             <div class="extra-box">
+							<p><strong>SKU#: </strong><?= /* @escapeNotVerified */ $_product->getSku() ?> </p>
                                 <span class="ships demo-tooltip">
                                     <a href="#" class="tooltip-toggle">ships via ups?</a>
                                     <span class="tooltip-content">you can check shipping charges under Cart Page</span>
