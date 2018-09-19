@@ -1,70 +1,10 @@
-body { font-family: Arial; }
-
 /* -header */
 
-.page-header .panel.wrapper {
-    background-color: #80b036 !important;
-    color: #fff;
-}
-.page-header .header.panel {
-    padding-bottom: 4px !important;
-    padding-top: 4px !important;
-}
-
-body.cms-home .page-main {
-    max-width: 100% !important;
-    padding: 0 !important;
-}
 
 /* Element moved in header panel so this need to hide */
-.header.content {
-    display: none;
-}
 
-.block-search {
-    width: 160px !important;
-}
 
-.minicart-wrapper {
-	margin-left: 10px;
-}
-.minicart-wrapper .action.showcart:before {
-    content: 'cart' !important;
-    color: #fff !important;
-    font-size: 14px !important;
-    text-transform: uppercase;
-    font-family: Arial !important;
-    line-height: 30px;
-    padding-top: 1px;
-}
-
-.logo {
-    margin: 0 !important;
-    position: absolute !important;
-    top: 0;
-}
-.logo img {
-    width: auto;
-    max-height: 98px; 
-}
-
-.header.panel > .header.links {
-    padding: 6px 0px !important;
-}
-.header.panel > .header.links > li {
-    font-size: 14px;
-    text-transform: uppercase;
-	margin: 0 0 0 10px;
-}
-.header.panel .header.links li:not(:first-child):after {
-    content: "|";
-	margin: 0 -5px 0 2px;
-}
-.header.panel .header.links li:last-child:after {
-    padding-left: 4px;
-}
 /* to remove line between header panel and navigation*/
-.page-header .panel.wrapper { border-bottom: 0 !important;}
 
     /* -End header */
 
@@ -254,14 +194,6 @@ a.create,
 a.continue,
 a.estateButton {
     color: #fff !important;
-}
-
-.message.success>*:first-child:before,
-.message.success {
-    color: green !important;
-}
-._keyfocus *:focus, input:not([disabled]):focus, textarea:not([disabled]):focus, select:not([disabled]):focus {
-    box-shadow: none !important;
 }
 
     /* -End coloring */

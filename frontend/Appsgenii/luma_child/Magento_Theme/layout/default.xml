@@ -3,9 +3,20 @@
         <!-- referenceBlock name="page.top" remove="true" / -->
         <!-- move element="catalog.topnav" destination="header-wrapper" after="logo" / -->
 
-        <move element="top.search" destination="header.panel" before="store_language"/>
+        <block class="Magento\Theme\Block\Html\Header\Logo" name="logo2">
+            <arguments>
+                <argument name="logo_img_height" xsi:type="number">98</argument>
+            </arguments>
+        </block>
+        <block class="Magento\Framework\View\Element\Template" name="top.search2" template="Magento_Search::form2.mini.phtml" />
+
+        <move element="top.search2" destination="header.panel" before="store_language"/>
         <move element="minicart" destination="header.panel" after="store_language" />
-        <move element="logo" destination="header.panel" after="store_language" />
+        <move element="logo2" destination="header.panel" after="store_language" />
+
+        <referenceContainer name="header-wrapper">
+            <block class="Magento\Checkout\Block\Cart\Sidebar" name="minicart2" after="logo" template="Magento_Checkout::cart/minicart.phtml" />
+        </referenceContainer>
 
         <referenceBlock name="form.subscribe" remove="true" />
         <referenceBlock name="footer_links" remove="true" />
