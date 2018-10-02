@@ -34,7 +34,25 @@
     /* -End product Page */
 
     /* -coloring */
-
+a, .alink, a:visited, .alink:visited, a:hover, .alink:hover, .opc-progress-bar-item._complete>span,
+.minicart-items .product-item-name a, .shipping-policy-block.field-tooltip .field-tooltip-action {
+    color: #000;
+}
+.action.primary {
+    background: red;
+    border: 1px solid red;	
+}
+.opc-progress-bar-item._active:before, .opc-progress-bar-item._active>span:before, button.update, .action-primary.action-accept, .action-primary.action-accept:hover  {
+    background: #f00 !important;
+    border-color: #f00 !important;
+    color: #fff;
+}.action-primary:focus, .action-primary:active, .action-primary:hover {    background: #f00;    border-color: #f00;    color: #fff;	  } 
+@media (min-width: 769px) {
+	.opc-progress-bar-item._active>span:before {
+		background: #f00 !important;
+		border-color: #f00 !important;
+	}		.opc-progress-bar-item._complete>span {		color: #000 !important;	}
+}
     /* -End coloring */
 
     /* -elements - General Elements */
