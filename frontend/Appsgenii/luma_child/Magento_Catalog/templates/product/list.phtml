@@ -101,9 +101,9 @@ $_helper = $this->helper('Magento\Catalog\Helper\Output');
                                                     <input type="hidden" name="product" value="<?= /* @escapeNotVerified */ $postParams['data']['product'] ?>">
                                                     <input type="hidden" name="<?= /* @escapeNotVerified */ Action::PARAM_NAME_URL_ENCODED ?>" value="<?= /* @escapeNotVerified */ $postParams['data'][Action::PARAM_NAME_URL_ENCODED] ?>">
                                                     <?php if ($_product->getTypeId() != 'configurable'): ?>
-                                                        <label> <?= /* @escapeNotVerified */ __('Quantity') ?></label>
+                                                        <label> <?= /* @escapeNotVerified */ __('Qty') ?></label>
                                                     <input type="number" name="qty"
-                                                           id="qty" maxlength="12"
+                                                           id="qty<?= $iterator ?>" maxlength="12"
                                                            value="1"
                                                            title="<?= /* @escapeNotVerified */ __('Qty') ?>" class="input-text qty" />
                                                     <?php endif; ?>
@@ -133,10 +133,20 @@ $_helper = $this->helper('Magento\Catalog\Helper\Output');
                                 </div>
                                 <? /* End of  Add to Cart Section */ ?>
                                 <? /* List Box Section  2*/ ?>
+<?php
+$bundle = $_product->getResource()->getAttribute('minimum_quantity_allowed')->getFrontend()->getValue($_product); 
+$dimension = $_product->getResource()->getAttribute('bundle_dimension_shipping')->getFrontend()->getValue($_product); 
+if ($_product->getTypeId() != 'configurable') {
+$getDecimalprice = $_product->getResource()->getAttribute('price')->getFrontend()->getValue($_product); 
+$price = number_format($getDecimalprice, 2, '.', '');
+}
+else 
+$price = $_product->getFinalPrice();
+?>
                                 <div class="multi-price">
-                                    <span class="label"> PRICE <br/> PER <br/> BOX</span>
-                                    <span class="qty-label"> 5 <br/> 10 <br/> 30+</span>
-                                    <span class="prices"> $19.99 <br/> $19.64 <br/> $17.83</span>
+                                    <span class="label"> PRICE/Bundle: <br/> <?= ($bundle)?'Bundle: <br/> ':'' ?> <?= ($dimension)?'BOX Dimensions:':'' ?></span>
+                                    <span class="qty-label"> $<?= $price ?> <br/> <?= ($bundle)?$bundle.' Boxes':'' ?> <br/> <?= $dimension ?></span>
+                                    <!-- span class="prices"> $19.99 <br/> $19.64 <br/> $17.83</span -->
                                 </div>
                             </div>
 							
