@@ -24,13 +24,11 @@
         <input type="hidden" name="related_product" id="related-products-field" value="" />
         <?= $block->getBlockHtml('formkey') ?>
         <?= $block->getChildHtml('form_top') ?>
+			<?php if ($_product->getTypeId() == 'configurable'): ?>
+				<label class="importantNote"><i><strong>Important Note:</strong> Our box design templates use fixed images/visuals as background, and the positioning of the visual content won’t change. We implement your supplied content to personalize the box(s) based on your chosen template/design. Some of the form fields are mandatory. If you don't provide us with information for the non-mandatory fields, they will be left blank. We recommend uploading high-resolution images and graphics.</i></label><br/><br/>
+			<?php endif; ?>
         <?php if (!$block->hasOptions()):?>
             <?= $block->getChildHtml('product_info_form_content') ?>
-            <div class="multi-price">
-                <span class="label"> PRICE <br> PER <br> BOX</span>
-                <span class="qty-label"> 5 <br> 10 <br> 30+</span>
-                <span class="prices"> $19.99 <br> $19.64 <br> $17.83</span>
-            </div>
             <div class="extra-box">
                 <span class="ships demo-tooltip">
                     <a href="#" class="tooltip-toggle">ships via ups?</a>
